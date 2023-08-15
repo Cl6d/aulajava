@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function novo(){
+        var nome=document.formizinho.nome.value
+        var rua=document.formizinho.rua.value
+        {
+            document.write("A Correios Av Brg Fari")
+            document.write("Nome:"+nome+"<br>")
+            document.write("Nome:"+rua+"<br>")
+
+            document.write("Atenciosamente,<br><br>")
+            document.write("Júlio Batista<br>")
+            document.write("Presidente da ABC/SUZ Trainning Corporation<br>")
+            document.write("Treinamento com qualidade com custo reduzido")
+        }
+    }
+</script>
+<body>
+    <form name="formizinho">
+        Nome: <input type="text" name="nome"><br><br>
+        Rua: <input type="text" name="rua"><br><br>
+        <input type="button" value="CONFIRM" onclick=novo()>
+    </form>
+</body>
+</html>

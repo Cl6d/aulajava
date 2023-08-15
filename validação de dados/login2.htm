@@ -1,0 +1,146 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Java Script</title>
+<script>
+function valida(){
+	vnome=form1.nome.value;
+	vsobrenome=form1.sobrenome.value;
+	vemail=form1.email.value;
+	vsexo=form1.sexo.value;
+	vdia=form1.dia.value;
+	vmes=form1.mes.value;
+	vano=form1.ano.value;
+	vprofissao=form1.profissao.value;
+	vtermos=form1.termos.value;
+	
+	if(vnome==""){
+		alert("Digite seu nome.");
+		return false;
+		}
+	
+	if(vsobrenome==""){
+		alert("Digite seu sobrenome.");
+		return false;
+		}
+	
+	if(vemail=="" || vemail.indexOf('@',0) == -1 || vemail.indexOf('.',0) == -1){
+		alert("Digite seu E-mail Corretamente!");
+		return false;
+		}
+	
+	if(vsexo==""){
+		alert("Escolha o sexo.");
+		return false;
+		}
+	
+	if(vdia==""){
+		alert("Digite o dia em que você nasceu.");
+		return false;
+		}
+		
+	if(vmes==""){
+		alert("Digite o mês em que você nasceu.");
+		return false;
+		}	
+		
+	if(vano==""){
+		alert("Digite o ano em que você nasceu.");
+		return false;
+		}
+		
+	if(vprofissao==""){
+		alert("Escolha uma profissão");
+		return false;
+	}
+
+	if(vtermos==""){
+		alert("Aceite os termos para continuar");
+		return false;
+	}
+}
+</script>
+
+
+
+<style type="text/css">
+<!--
+.titulos {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #000;
+}
+.texto {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #666;
+}
+-->
+</style>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <p class="titulos">Nome<br />
+<label>
+      <input type="text" name="nome" id="nome" class="texto" />
+    </label>
+  </p>
+<p class="titulos">Sobrenome<br />
+<label>
+  <input type="text" name="sobrenome" id="sobrenome" class="texto" />
+  </label>
+  </p>
+<p class="titulos">E-mail<br />
+  <input type="text" name="email" id="email" class="texto" />
+</p>
+<p class="titulos">Sexo<br />
+<label><span class="texto">
+  <input type="radio" name="sexo" id="sexo" value="masculino" />
+  </span></label>
+  <span class="texto">
+    Masculino 
+    <label>
+      <input type="radio" name="sexo" id="sexo" value="feminino" />
+    </label>
+  Feminino</span></p>
+<p class="titulos">Data de Nascimento<br />
+<span class="texto">
+    <label>
+      Dia
+      <input name="dia" type="text" id="dia" size="5" />
+      Mês
+<input name="mes" type="text" id="mes" size="15" class="texto" />
+    ano 
+    <input name="ano" type="text" id="ano" size="10" />
+    </label>
+</span>
+  </p>
+<p class="titulos">Profissão<br />
+<label>
+      <select name="profissao" id="profissao" class="texto">
+        <option value="" selected></option>
+        <option value="pedreiro">Pedreiro</option>
+        <option value="motorista">Motorista</option>
+        <option value="professor">Professor</option>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="termos" id="termos" />
+    </label>
+    <span class="texto">
+    Concordo com os termos</span></p>
+  <p>
+    <label>
+      <input type="submit" name="enviar" id="enviar" value="Enviar" onClick="valida()" />
+    </label>
+    <label>
+      <input type="reset" name="redefinir" id="redefinir" value="Redefinir" />
+    </label>
+  </p>
+
+</form>
+</body>
+</html>
